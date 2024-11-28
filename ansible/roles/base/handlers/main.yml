@@ -8,3 +8,7 @@
 
 - name: enable chrony
   ansible.builtin.service: name=chrony state=started enabled=true
+
+- name: update grub
+  ansible.builtin.command: grub-mkconfig -o /boot/grub/grub.cfg
+  when: bootloader == "grub"
