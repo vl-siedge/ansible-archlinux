@@ -14,7 +14,7 @@
 
 - name: Configure chrony
   ansible.builtin.copy: 
-  src: chrony.conf
-  dest: /etc/chrony.conf
+    src: chrony.conf
+    dest: /etc/chrony.conf
   notify:
     - restart chrony
