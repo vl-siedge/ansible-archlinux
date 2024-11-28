@@ -4,9 +4,6 @@
   ansible.builtin.template:
     src: mirrorlist.j2
     dest: /etc/pacman.d/
-    mode: 0644
-    user: root
-    group: root
 
 - name: Pacman config setup
   ansible.builtin.template:
