@@ -1,10 +1,9 @@
 kline:
-    cryptdevice: "cryptdevice={{ cryptdevice }}:vg0"
-    root: root=/dev/mapper/vg0-root
-    resume: resume=/dev/mapper/vg0-swap
+    root: root=/dev/nvme0n1p2
+    resume: resume=/dev/nvme0n1p3
     options: rw quiet splash
 
-kernel_line: "{{ kline.cryptdevice }} {{ kline.root }} {{ kline.resume }} {{ kline.options }}"
+kernel_line: "{{ kline.root }} {{ kline.resume }} {{ kline.options }}"
 
 splash:
     file: splash.png

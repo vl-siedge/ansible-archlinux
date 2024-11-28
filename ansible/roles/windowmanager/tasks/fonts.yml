@@ -12,6 +12,7 @@
       - fontconfig
       - xorg-font-util
       - powerline-fonts
+      - ttf-nerd-fonts-symbols-mono
     state: present
   register: task_result
   until: task_result is success

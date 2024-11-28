@@ -5,7 +5,7 @@
 # ==================
 ##
 user:
-    name: aaron
+    name: siedge
     group: users
     shell: /bin/zsh
 
@@ -21,8 +21,8 @@ user:
 #   Option: "nvidia" will install nvidia drivers and tools
 ##
 system:
-    locale: de_CH.UTF-8
-    timezone: Europe/Zurich
+    locale: en_US.UTF-8
+    timezone: Europe/Berlin
     processor: amd
     graphics_card: nvidia
     macspoof: disabled
@@ -34,14 +34,7 @@ system:
 # * use syslinux for BIOS/MBR setups
 # * use grub for UEFI/GPT setups
 ##
-bootloader: grub
-
-##
-# Cryptdevice config
-# ==================
-# The device name of your luks device
-##
-cryptdevice: /dev/nvmen1p2
+bootloader: syslinux
 
 ##
 # Connectivity configuration
@@ -49,7 +42,7 @@ cryptdevice: /dev/nvmen1p2
 ##
 ssh:
     port: 22
-    enable_sshd: true
+    enable_sshd: false
 
 ##
 # Dotfile configuration
@@ -59,7 +52,7 @@ ssh:
 ##
 dotfiles:
     installation: true
-    url: https://github.com/id101010/dotfiles.git
+    url: https://github.com/vl-siedge/dotfiles
     destination: "/home/{{ user.name }}/.config/dotfiles"
 
 ##
@@ -81,3 +74,8 @@ base_packages:
     - rsync
     - coreutils
     - dateutils
+    - nmap
+    - strace
+    - lsof
+    - sysstat
+    - traceroute

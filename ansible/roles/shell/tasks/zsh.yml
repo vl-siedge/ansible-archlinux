@@ -18,6 +18,7 @@
   aur: name={{ item }} user={{ user.name }}
   with_items:
     - oh-my-zsh-git
+    - oh-my-zsh-powerline-theme-git
   register: omzinstall
   until: omzinstall is success
   retries: 10

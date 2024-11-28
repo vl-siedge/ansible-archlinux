@@ -9,3 +9,12 @@
   community.general.pacman: name=firefox state=present
   tags:
     - firefox
+
+- name: Install Google Chrome
+  aur: name={{ item }} user={{ user.name }}
+  with_items:
+    - google-chrome
+  register: chromeinstall
+  until: chromeinstall is success
+  retries: 10
+  delay: 2

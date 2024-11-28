@@ -1,0 +1,4 @@
+- name: pacman install steam
+  pacman:
+    name:
+      - steam
