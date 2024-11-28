@@ -1,7 +1,7 @@
 ---
 
 - name: install vim editor
-  community.general.pacman:
+  pacman:
     name: vim
     state: present
   register: task_result
