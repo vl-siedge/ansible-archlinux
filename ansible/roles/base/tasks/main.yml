@@ -1,10 +1,10 @@
 ---
 
-- name: import base tasks
-  ansible.builtin.import_tasks: base.yml
-
 - name: import userconfig tasks
   ansible.builtin.import_tasks: userconfig.yml
+  
+- name: import base tasks
+  ansible.builtin.import_tasks: base.yml
 
 - name: import ntp tasks
   ansible.builtin.import_tasks: ntp.yml
