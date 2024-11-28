@@ -34,7 +34,7 @@ system:
 # * use syslinux for BIOS/MBR setups
 # * use grub for UEFI/GPT setups
 ##
-bootloader: syslinux
+bootloader: grub
 
 ##
 # Connectivity configuration
